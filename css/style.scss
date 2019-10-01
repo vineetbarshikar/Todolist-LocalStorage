@@ -1,0 +1,142 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 10% 80% 10%;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+        outline-offset: 0;
+    }
+}
+
+header {
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 4px #ccc;
+    grid-column: span 10;
+}
+
+header h1 {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+main {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin: 0 10% 0 10%;
+    height: 100%;
+    grid-column: 3 / span 6;
+}
+
+.clist-new {
+    height: 15%;
+    border-bottom: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100%;
+}
+
+.clist-new input {
+    grid-column: span 10;
+    margin: 1.2rem;
+    padding: .8rem;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.clist-add {
+    grid-column: span 3;
+    margin: 1rem;
+    padding: .8rem;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 15px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0069d9;
+    }
+}
+
+.clist-list {
+    height: 80%;
+    overflow-y: scroll;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clist-li {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100%;
+    height: 20px;
+    padding: 20px;
+}
+
+.clist-cbox {
+    grid-column: 1;
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+    border: 2px solid #ccc;
+
+    &.complete {
+        border: none;
+        background-color: green;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.clist-span {
+    grid-column: span 8;
+    font-size: 1em;
+
+    &.complete {
+        color: #ccc;
+        text-decoration: line-through; 
+    }
+}
+
+.clist-del {
+    grid-column: 10;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    margin-left: 20px;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0;
+}
+
+.clist-status {
+    grid-column: span 10;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .clist-status-span {
+        font-size: 2em;
+        font-weight: 700;
+        color: orange;
+    }
+}
