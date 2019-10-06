@@ -98,6 +98,7 @@ class Todo {
             let id = event.target.id.split("-")[1];
             event.target.parentElement.remove();
 
+            if (this.todos.get(parseInt(id)).isComplete) this.completed--;
             this.todos.delete(parseInt(id));
         }
 
